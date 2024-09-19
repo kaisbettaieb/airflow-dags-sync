@@ -28,10 +28,11 @@ push:
       tag: "{{ build-image.tag }}"
 
 # pull section allows you to provide instructions for cloning this project in remote locations
+
 pull:
   - prefect.deployments.steps.git_clone:
-      repository: "{{ repository }}"
-      branch: "{{ branch }}"
+      repository: "https://github.com/kaisbettaieb/prefect-k8s-example.git"
+      branch: "main"
       access_token: null
 
 # the definitions section allows you to define reusable components for your deployments
